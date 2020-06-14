@@ -1,44 +1,4 @@
-# Purpose 
-This folder is the template folder for github repositories. Use this as a base to create and commit code to github.com 
+# Price prediction for Melbourne Airbnb listings
+Hosts on Airbnb often end up using a trial and error approach or have to perform an extensive market analysis to come up with a sensible price for their property. A helpful recommendation that Airbnb can provide is an approximate range of price based on similar properties hosted by others. Melbourne Airbnb dataset was used to perform predictive analysis of price of listings using Supervised Machine learning. Regression models were built and hyperparameters tuned using 5 fold cross validation. XGBoost Regressor gave a significantly higher performance with a Root Mean Squared error (RMSE) of  48.1 over a Naive baseline  model (RMSE 75.8).
+ 
 
-# 1. Create the new folder
-
-Copy the entire contents of the ```docker-template``` folder and re-name the ```my-new-folder-2```
-
-# 2. Initialise git 
-
-- Navigate to ```my-new-folder-2``` folder in the terminal
-```bash
-ssh-add
-git init
-git add .
-git status 
-git commit -m "Init new repo first commit" 
-```
-
-# 3. Create a new repo at github.com 
-
-- Create a repository at github.com with the same name as the new folder ```my-new-folder-2```
-- Select public or private as desired
->Use this option __…or push an existing repository from the command line__
-```
-git remote add origin git@github.com:CrazyDaffodils/my-new-folder-2.git
-git push -u origin master
-```
-
-# 4. Update required packages 
-- Navigate to ```my-new-folder-2``` folder in the terminal and to open the folder in VS Code
-```bash
-code . 
-```
-- Modify the ```docker/Dockerfile``` with the appropriate packages. Then rebuild docker images
-```bash
-docker-compose up --build
-```
-- Push the changes to git & github.com
-```bash
-git add .
-git status
-git commit -m "Package changes"
-git push
-```
